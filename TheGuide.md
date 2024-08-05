@@ -41,4 +41,5 @@ Getting the .Net SDK installed:
    O. "ninja"
    
    (at this point I'm wondering if I am doing things the "hard way", lol)
+   (looks like it is stalling out somehow on "SOURCE_BUILD_SDK_DIR_ARCADE_SHARED_FX_SDK  but I'm just going to let it sit for a while)
    
