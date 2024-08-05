@@ -1,8 +1,0 @@
-This is a work in progress.
-
-Getting the .Net SDK installed:
-
-1. Install git:   pkg install git
-2. Clone the ports repo:   git clone https://git.freebsd.org/ports.git /usr/ports
-3. CD to the .Net ports dir:  cd /usr/ports/lang/dotnet
-4. make install clean
