@@ -9,4 +9,5 @@ Getting the .Net SDK installed:
    A. First you will see a long download
    B. You will then be presented with 2 dialog boxes in succession. Accept the defaults on both by hitting the Enter key.
    C. Wait through the long build process.
+   D. You'll see a "gnugrp-3.11" dialog box.  Accept the defaults by hitting Enter.
    
