@@ -1,7 +1,7 @@
 This is a work in progress.
 
 DO NOT ATTEMPT ON A SLOW/LOW RAM MACHINE OR YOU WILl REGRET YOUR DECISION !
-
+I am building on a Dell Precision Mobile Workstation with 98GB RAM and a 11th Gen Inntel i7-11850H with 8 cores and it still takes an hour+ !
 Getting the .Net SDK installed:
 
 1. Install git:   pkg install git
