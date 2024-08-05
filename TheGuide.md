@@ -8,4 +8,5 @@ Getting the .Net SDK installed:
 5. Build/install:  make install clean (will take a bit)
    A. First you will see a long download
    B. You will then be presented with 2 dialog boxes in succession. Accept the defaults on both by hitting the Enter key.
+   C. Wait through the long build process.
    
