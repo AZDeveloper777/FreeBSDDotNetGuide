@@ -18,23 +18,23 @@ Getting the .Net SDK installed:
    
    D. You'll see a "gnugrp-3.11" dialog box.  Accept the defaults by hitting Enter.
    
-   E. "krb5-____" dialog box will come up. Accept the defaults by hitting Enter.
+   E. "krb5-____" dialog box. Accept the defaults by hitting Enter.
    
-   F. "gmake____" dialog box, Accept the defaults by hitting Enter.
+   F. "gmake____"  same as above for all of these.
    
-   G. "m4____" dialog box, Accept the defaults by hitting Enter.
+   G. "m4____" 
    
-   H. "texinfo_____"  dialog box, Accept the defaults by hitting Enter.
+   H. "texinfo_____"  
    
-   I. "help2man_____"  dialog box, Accept the defaults by hitting Enter.
+   I. "help2man_____"  
    
-   J. "p5-Locale-libintl__" dialog box, Accept the defaults by hitting Enter.
+   J. "p5-Locale-libintl__"
    
-   K. "autoconf___"  dialog box, Accept the defaults by hitting Enter.
+   K. "autoconf___" 
    
-   L. "automake___" dialog box, Accept the defaults by hitting Enter.
+   L. "automake___" 
    
-   M. "node20__" dialog box, Accept the defaults by hitting Enter.
+   M. "node20__" 
    
    N. "c-ares"
    
@@ -42,5 +42,11 @@ Getting the .Net SDK installed:
    
    (at this point I'm wondering if I am doing things the "hard way", lol)
    
-   (looks like it is stalling out somehow on "SOURCE_BUILD_SDK_DIR_ARCADE_SHARED_FX_SDK  but I'm just going to let it sit for a while)
+   It will look like it is looping on "SOURCE_BUILD_SDK_DIR_ARCADE_SHARED_FX_SDK" but wait and eventually it will finish.
+   
+6. When you get the prompt back, type dotnet --version and you should see some output that looks like "8.0.106".
+
+Getting an IDE setup:
+
+   
    
