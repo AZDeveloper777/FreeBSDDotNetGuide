@@ -48,5 +48,6 @@ Getting the .Net SDK installed:
 
 Getting an IDE setup:
 
-   
+As much as I dislike Electron apps in general, the easiest choice here seems to be VSCode.
+Install it with: pkg install vscode
    
