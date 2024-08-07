@@ -1,0 +1,1 @@
+If you have Intel integrated graphics AND a discrete GPU and are trying to use your laptop's internal display and an external HDMI monitor with FreeBSD and X Org (no idea if Wayland is diff) , you will need to disable your integrated graphics in the BIOS.
