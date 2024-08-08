@@ -1,1 +1,2 @@
 Aug 7 2024 - I read that VSCode can run under a Linux Compatabiliy layer on FreeBSD.  This might make things a whole lot easier when it comes to using Extensions.  I need to look into this.
+Aug 8 2024 - We should consider if having a custom FreeBSD distro with everything pre-configured for VSCode C# development that tracks -RELEASE would be worth it.
