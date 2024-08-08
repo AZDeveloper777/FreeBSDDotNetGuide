@@ -1,0 +1,7 @@
+Currently (August 7th, 2024),I cannot find a way to install "C# Dev Kit for Visual Studio Code" in VSCode on FreeBSD.
+That said, I am new to VSCode, I've always used Visual Studio, so perhaps there is something I am just not grokking.
+
+Things that I'm experiencing that are different than Visual Studio:
+1. Intellisense isn't acting very intelligent.  Either I get too many entries or none at all.
+2. You can't just set a "Startup" project and hit the "play" button to start the app.
+3. In fact, there are no toolbar buttons at all.
