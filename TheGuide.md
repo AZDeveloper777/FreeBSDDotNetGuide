@@ -45,6 +45,7 @@ Getting the .Net SDK installed:
    It will look like it is looping on "SOURCE_BUILD_SDK_DIR_ARCADE_SHARED_FX_SDK" but wait and eventually it will finish.
    
 6. When you get the prompt back, type dotnet --version and you should see some output that looks like "8.0.106".
+7. Follow the "KDE Wallet" instructions in this repo.
 
 Getting an IDE setup:
 
