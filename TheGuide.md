@@ -1,4 +1,6 @@
 After a few hours testing and back and forth with ChatGPT, this might be the way to do it.
+CURRENTLY THIS DOESN"T WORK something to do with the chroot Debian unable to access /proc
+It's a DBus issue....
 
 # Step 1: Prepare the FreeBSD System
 sysrc linux_enable="YES"
