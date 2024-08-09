@@ -1,54 +1,36 @@
-This is a work in progress.
+After a few hours testing and back and forth with ChatGPT, this might be the way to do it.
 
-DO NOT ATTEMPT ON A SLOW/LOW RAM MACHINE OR YOU WILl REGRET YOUR DECISION !
+# Step 1: Prepare the FreeBSD System
+sysrc linux_enable="YES"
+service linux start
 
-I am building on a Dell Precision Mobile Workstation with 98GB RAM and a 11th Gen Inntel i7-11850H with 8 cores and it still takes an hour+ !
+# Step 2: Install the Debian Userland
+pkg install debootstrap
+debootstrap bookworm /compat/debian
 
-Getting the .Net SDK installed:
+# Step 3: Mount `devfs`
+mount -t devfs devfs /compat/debian/dev
 
-1. Install git:   pkg install git
-2. Clone the ports repo:   git clone https://git.freebsd.org/ports.git /usr/ports  (will take a bit)
-4. CD to the .Net ports dir:  cd /usr/ports/lang/dotnet
-5. Build/install:  make install clean (will take a bit)
-   A. First you will see a long download
-   
-   B. You will then be presented with 2 dialog boxes in succession. Accept the defaults on both by hitting the Enter key.
-   
-   C. Wait through the long build process.
-   
-   D. You'll see a "gnugrp-3.11" dialog box.  Accept the defaults by hitting Enter.
-   
-   E. "krb5-____" dialog box. Accept the defaults by hitting Enter.
-   
-   F. "gmake____"  same as above for all of these.
-   
-   G. "m4____" 
-   
-   H. "texinfo_____"  
-   
-   I. "help2man_____"  
-   
-   J. "p5-Locale-libintl__"
-   
-   K. "autoconf___" 
-   
-   L. "automake___" 
-   
-   M. "node20__" 
-   
-   N. "c-ares"
-   
-   O. "ninja"
-   
-   (at this point I'm wondering if I am doing things the "hard way", lol)
-   
-   It will look like it is looping on "SOURCE_BUILD_SDK_DIR_ARCADE_SHARED_FX_SDK" but wait and eventually it will finish.
-   
-6. When you get the prompt back, type dotnet --version and you should see some output that looks like "8.0.106".
-7. Follow the "KDE Wallet" instructions in this repo.
+# Set the Linux Emulation Path
+sysctl compat.linux.emul_path=/compat/debian
+echo "compat.linux.emul_path=/compat/debian" >> /etc/sysctl.conf
 
-Getting an IDE setup:
+# Step 4: Enter the Debian Environment
+chroot /compat/debian /bin/bash
 
-As much as I dislike Electron apps in general, the easiest choice here seems to be VSCode.
-Install it with: pkg install vscode
-   
+# Step 5: Set Up the Debian Environment
+apt update
+apt install gnupg
+
+# Step 6: Install Visual Studio Code
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+apt update
+apt install code
+
+# Step 7: Run Visual Studio Code
+code
+
+# Step 8: Exit the Debian Environment
+exit
