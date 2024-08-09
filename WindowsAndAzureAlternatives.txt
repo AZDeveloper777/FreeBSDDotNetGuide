@@ -1,0 +1,3 @@
+Azure Service Bus / MSMQ -> Rabbit MQ
+Azure Web Jobs / Windows Service -> cron, Quartz.Net
+
