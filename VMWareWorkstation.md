@@ -4,6 +4,7 @@ How to install open-vmware-tools and configure Xorg:
 3. sysrc vmware_guestd_enable="YES"
 
 This will get you clipboard integration with the host, drag and drop and auto screen resizing.
+
 What's missing:  Mouse integration.  You'll have to hit ctrl+alt to leave the VM.
 
 Possible issues:
