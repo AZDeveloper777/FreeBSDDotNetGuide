@@ -1,3 +1,8 @@
+Clarifications:
+- You can get Dot Net from pkg and it will work just fine
+- You can get VS Code working without using Linux Compat but you won't be able to use the Extensions unless they have a FreeBSD version, hence no C# Dev Kit.
+- What you see below is my work to get VS Code working in such a way that we can use C# Dev Kit and have a reasonable dev environment that can "see" the FreeBSD system correctly.
+
 After a few hours testing and back and forth with ChatGPT, this might be the way to do it.
 CURRENTLY THIS DOESN"T WORK something to do with the chroot Debian unable to access /proc
 It's a DBus issue....
