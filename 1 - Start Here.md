@@ -18,4 +18,4 @@ FreeBSD: {
 }
 6. pkg update
 7. pkg upgrade
-8. 
+
