@@ -1,5 +1,6 @@
 ## Get DOTNET .8 ASP.NET MVC working in a Bastille jail
 Note:  The jail running the DotNet app will consume about 603MB at idle  
+Monitor a jail's resource usage with: rctl -u jail:<jail_name>  
   
 1. pkg  install bastille  
 2. sysrc bastille_enable="YES"  
