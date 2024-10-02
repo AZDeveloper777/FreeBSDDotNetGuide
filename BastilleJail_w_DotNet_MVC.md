@@ -10,16 +10,22 @@ bastille_zfs_zpool="zroot"
 I.e. bastille create mvcjail 14.1-RELEASE 192.168.1.45 em0  
 6. bastille stop <jail_name>  
 7. nano /usr/local/bastille/jails/<jail_name>/jail.conf  
-allow.mlock = 1 ;  
-8. bastille start <jail_name>  
-9. bastille console <jail_name>  
-10. pkg install nginx dotnet nano  (in the jail)   
-11. sysrc nginx_enable="YES"  
-12. dotnet –version  (in the jail and should return something like 8.0.106)   
-13. dotnet new mvc -o /srv/testapp (in the jail)   
-14. cd /srv/testapp   (in the jail)   
-15. dotnet build   (in the jail)   
-16. nano /usr/local/etc/nginx/nginx.conf  (in the jail)   
+allow.mlock = 1 ;
+rctl {  
+    jail:<jail_name>:memorylocked=2G;  # Limit locked memory to 2GB  
+    jail:<jail_name>:memoryuse=4G;     # Example: Total memory usage capped at 4GB (optional)  
+    }  
+(in a production environment, you'll want to tune the rctl for each jail so that you have enough physical RAM avail for a physical lock that your application is happy but not so much that if all your jails decided to act poorly they could bork your system.  Note that safe DotNet code , i.e. not using P/Invoke should, in theory, fail gracefully if it attempts to lock more physical RAM than it set by rctl.)  
+
+9. bastille start <jail_name>  
+10. bastille console <jail_name>  
+11. pkg install nginx dotnet nano  (in the jail)   
+12. sysrc nginx_enable="YES"  
+13. dotnet –version  (in the jail and should return something like 8.0.106)   
+14. dotnet new mvc -o /srv/testapp (in the jail)   
+15. cd /srv/testapp   (in the jail)   
+16. dotnet build   (in the jail)   
+17. nano /usr/local/etc/nginx/nginx.conf  (in the jail)   
 Modify the first server block to look like:  
 server {  
     listen 80;  
@@ -36,8 +42,8 @@ server {
         proxy_set_header   X-Forwarded-Proto $scheme;  
     }  
 }  
-17. service nginx restart (in the jail)   
-18. nano /srv/<jail_name>/Properties/launchSettings.json  
+18. service nginx restart (in the jail)   
+19. nano /srv/<jail_name>/Properties/launchSettings.json  
     "http": {  
       "commandName": "Project",  
       "dotnetRunMessages": true,  
@@ -48,10 +54,10 @@ server {
       }  
     },  
 Note: the only line that is changed is "applicationUrl": "http://localhost:5000",  
-19. (your current dir should still be /srv/testapp in the jail)  
+20. (your current dir should still be /srv/testapp in the jail)  
 dotnet run  
 (this will output a few messages of type warn and info and then will appear to hang. It isn’t hanging, it is running)  
-20. Back on the host OS (not in the jail), open a web browser and go to a URL of your jail’s IP address.  You should see:   
+21. Back on the host OS (not in the jail), open a web browser and go to a URL of your jail’s IP address.  You should see:   
 Welcome  
   
 Learn about building Web apps with ASP.NET Core.  
