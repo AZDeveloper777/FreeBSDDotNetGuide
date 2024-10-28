@@ -94,11 +94,11 @@ dotnet build
 ```
 nano /usr/local/etc/nginx/nginx.conf
 ```
-and Modify the first server block to look like:  
+and Modify the first server block to look like this, assuming ip address of 192.168.1.151:  
 ```
 server {  
     listen 80;  
-    server_name <ip_address>;  
+    server_name 192.168.1.151;  
 
     location / {  
         proxy_pass         http://localhost:5000;  
@@ -112,8 +112,15 @@ server {
     }  
 }
 ```
-25. service nginx restart    
-26. nano /srv/<jail_name>/Properties/launchSettings.json  
+18. Restart nginx
+```
+service nginx restart
+```
+19. Modify your launch settings (assuming mvcjail) :
+```
+nano /srv/mvcjail/Properties/launchSettings.json
+```
+```
     "http": {  
       "commandName": "Project",  
       "dotnetRunMessages": true,  
@@ -123,11 +130,16 @@ server {
         "ASPNETCORE_ENVIRONMENT": "Development"  
       }  
     },  
-Note: the only line that is changed is "applicationUrl": "http://localhost:5000",  
-27. (your current dir should still be /srv/testapp in the jail)  
-dotnet run  
-(this will output a few messages of type warn and info and then will appear to hang. It isn’t hanging, it is running)  
-28. Back on the host OS (not in the jail), open a web browser and go to a URL of your jail’s IP address.  You should see:   
+```
+Note: the only line that is changed is "applicationUrl": "http://localhost:5000",    
+
+20. (your current dir should still be /srv/testapp in the jail)  
+```
+dotnet run
+```
+(this will output a few messages of type warn and info and then will appear to hang. It isn’t hanging, it is running)   
+
+21. Back on the host OS (not in the jail), open a web browser and go to a URL of your jail’s IP address.  You should see:   
 Welcome  
   
 Learn about building Web apps with ASP.NET Core.  
