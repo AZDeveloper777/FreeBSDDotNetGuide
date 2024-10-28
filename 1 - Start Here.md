@@ -3,12 +3,19 @@ See VMWareWorkstation.md for instructions on having FreeBSD as a guest in VMWare
 You need to switch to root user by using "su" before proceeding.
 
 1. Install pkg:  
-   pkg  
-2. Install nano:  
-   pkg install nano  
+```
+pkg
+```
+3. Install nano:  
+```
+pkg install nano  
+```
 4. Open the pkg config:  
+```
 nano /etc/pkg/FreeBSD.conf
+```
 5. Change it to look like this:  
+```
 FreeBSD: {  
   url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest",  
   mirror_type: "srv",  
@@ -16,6 +23,13 @@ FreeBSD: {
   fingerprints: "/usr/share/keys/pkg",  
   enabled: yes  
 }
-6. pkg update
-7. pkg upgrade
+```
+6. Update pkg
+```
+pkg update
+```
+7. Upgrade
+```
+pkg upgrade
+```
 
