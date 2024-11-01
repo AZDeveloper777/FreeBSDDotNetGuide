@@ -8,3 +8,4 @@ What's here:
 - How to host a .Net web application in a Jail on FreeBSD. https://github.com/AZDeveloper777/FreeBSDDotNetGuide/blob/main/BastilleJail_w_DotNet_MVC.md
 - How to host a Git server on FreeBSD that you can use with VSCode and Visual Studio as your remote repo.  https://github.com/AZDeveloper777/FreeBSDDotNetGuide/blob/main/HostGitOnFreeBSD.md
 - Assorted tips, tricks, thoughts and musings from the perspective of a Windows / .Net developer on moving to FreeBSD an application delivery platform and development environment.  I'm a long time VMWare Workstation user, so you'll see some of that, too.
+- Coming soon: How to run MS SQL Server in a Linux VM on FreeBSD. This is based on my work at: https://github.com/AZDeveloper777/MSSQL2022LinuxGuide
