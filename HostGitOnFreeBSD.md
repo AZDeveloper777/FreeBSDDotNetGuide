@@ -25,7 +25,7 @@ Install ForgeJo
 ```
 cd /usr/ports/www/forgejo
 ```
-2. Make it
+2. Make it (expect this step to take 15 min on a 4 core , 16GB RAM VM on modern hardware)
 ```
 make install clean
 ```
