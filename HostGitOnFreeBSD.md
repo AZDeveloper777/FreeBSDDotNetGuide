@@ -82,4 +82,4 @@ service forgejo start
 ```
 su -m git -c 'forgejo doctor check'
 ```
-
+The real test is to go to a different machine and point your web browser to http://<IP_ADDRESS>:3000 and see if you get the ForgeJo "welcome" screen. Then register an account and create a repo.   WARNING: I do not consider this secure enough of a config for the public internet.
