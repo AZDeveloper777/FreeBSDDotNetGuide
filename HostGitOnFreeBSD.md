@@ -8,7 +8,7 @@ Git
 pkg install git
 ```
 
-Load the FreeBSD ports locally
+Load the FreeBSD ports locally  
 NOTE: If you loaded ports during your FreeBSD install, this command won't work.  I'll update this at some point with what to do if you are in that situation. (probably just blow away /usr/ports and then run the command, but I want to test before I say for sure)
 ```
 git clone https://git.freebsd.org/ports.git /usr/ports
