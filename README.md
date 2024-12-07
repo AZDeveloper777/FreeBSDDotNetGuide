@@ -1,5 +1,7 @@
 # FreeBSDDotNetGuide
-A guide to setting up a .Net development environment on  FreeBSD
+A guide to setting up a .Net development environment on  FreeBSD  
+Initially, this guide was for FreeBSD 14.1-RELEASE.  
+I have updated this guide and tested it again on 14.2-RELEASE.  
 
 This guide is for .Net Developers.  It assumes you know enough to get FreeBSD installed but are generally unfamiliar with FreeBSD as a development platform.
 
