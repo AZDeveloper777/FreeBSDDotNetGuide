@@ -1,3 +1,4 @@
+(Now inlined with Step 2)
 NOTE - You don't need to do this step unless you are running in a VMWare Workstation guest.
 
 How to install open-vmware-tools and configure Xorg:
