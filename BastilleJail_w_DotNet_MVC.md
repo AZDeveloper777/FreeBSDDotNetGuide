@@ -1,4 +1,8 @@
 ## Get DOTNET .8 ASP.NET MVC working in a Bastille jail
+The initial version of the document was for FreeBSD 14.1-RELEASE.  
+I validated these instructions again Dec 7, 2024 for FreeBSD 14.2-RELEASE.  
+Change any references to 14.1 to 14.2 if you are working on 14.2.  
+
 Note:  The jail running the DotNet app will consume about 603MB at idle  
 Monitor a jail's resource usage with: rctl -u jail:<jail_name>  
 1.  
