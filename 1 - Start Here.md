@@ -1,8 +1,8 @@
-This guide assumes you have FreeBSD 14.1-RELEASE or 14.2-RELEASE already installed.
-I tested these instructions on 14.2-RELEASE on Dec 7th, 2024. Previous versions of this guide were tested on 14.1-RELEASE.
-This guide should still work just fine on 14.1-RELEASE.
+This guide assumes you have FreeBSD 14.1-RELEASE or 14.2-RELEASE already installed.  
+I tested these instructions on 14.2-RELEASE on Dec 7th, 2024. Previous versions of this guide were tested on 14.1-RELEASE.  
+This guide should still work just fine on 14.1-RELEASE.  
 If you are running FreeBSD as a guest in VMWare Workstation, the specific steps to make that work are now inlined in Step 2.
-You need to switch to root user by using "su" before proceeding.
+You need to switch to root user by using "su" before proceeding.  
 
 1. Install pkg:  
 ```
