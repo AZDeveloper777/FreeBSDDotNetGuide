@@ -10,6 +10,12 @@ Git
 pkg install git
 ```
 
+Note:  I've detailed how to install from ports.  You can also install from pkg i.e.
+```
+pkg install forgejo
+```
+if you install from pkg, skip to #3.
+
 Load the FreeBSD ports locally  
 NOTE: If you loaded ports during your FreeBSD install, this command won't work.  I'll update this at some point with what to do if you are in that situation. (probably just blow away /usr/ports and then run the command, but I want to test before I say for sure)
 ```
