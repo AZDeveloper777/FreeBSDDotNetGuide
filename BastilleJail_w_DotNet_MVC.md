@@ -122,7 +122,7 @@ service nginx restart
 ```
 19. Modify your launch settings (assuming mvcjail) :
 ```
-nano /srv/mvcjail/Properties/launchSettings.json
+nano /srv/testapp/Properties/launchSettings.json
 ```
 ```
     "http": {  
