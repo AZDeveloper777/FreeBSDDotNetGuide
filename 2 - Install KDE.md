@@ -1,7 +1,14 @@
+From https://cgit.freebsd.org/ports/tree/UPDATING  
+As of Feb 3, 2025 :
+" All KDE ports were fully switched to Qt6/KF6. Plasma 5 ports were removed.  
+  KDE Applications were updated to 24.12."  
+  
+So as of March 29, 2025, I've updated these instructions.  
+  
 Step 1 will show no output for a while and will take some time  
 1.
 ```
-pkg install --quiet --yes kde5 plasma5-sddm-kcm sddm xorg  
+pkg install --quiet --yes kde sddm
 ```
 1a. (Only needed for VMWare Workstation VMs with UEFI at this point)  
 ```
