@@ -13,6 +13,10 @@ pkg
 ```
 pkg install nano  
 ```
+
+NOTE: I did NOT have to switch to "latest" to get dotnet working on 14.3-RELEASE  
+If you are on 14.3-RELEASE you should be able to skip steps 4 and 5 !  
+
 4. Open the pkg config:  
 ```
 nano /etc/pkg/FreeBSD.conf
