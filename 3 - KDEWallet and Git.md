@@ -1,3 +1,5 @@
+Verified working on FreeBSD 14.3-RELEASE on 6/17/2025.
+
 Naturally, you'll need Git:
 ```
 pkg install git
