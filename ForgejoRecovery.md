@@ -7,6 +7,7 @@ On the old machine:
   cd /var/db/forgejo
   sudo -u git forgejo dump
   scp forgejo-dump-somenumbers.zip yourusername@newmachinehostnameorip:/home/yourusername/
+  service forgejo stop
   scp forgejo.db yourusername@newmachinehostnameorip:/home/yourusername/
 ```
 
