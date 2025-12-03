@@ -1,4 +1,5 @@
-TESTED Dec 12th, 2024 on FreeBSD 14.2-RELEASE
+Verified working on FreeBSD 15.0-RELEASE on 12/2/2025.
+Verified working on FreeBSD 14.2-RELEASE Dec 12th, 2024 
 
 SECURITY THOUGHTS:
 Keep in mind I'm new to FreeBSD, so there might be security considerations that I'm missing in how this is setup.  Namely, no HTTPS and the reliance on user/pass for repo authentication.    I basically did this for use BEHIND my firewall/router on my private LAN.  I'd think twice about hosting this config on the public internet.  
