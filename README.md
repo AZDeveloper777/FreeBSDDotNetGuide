@@ -3,6 +3,7 @@ A guide to setting up a .Net development environment on  FreeBSD
 Initially, this guide was for FreeBSD 14.1-RELEASE.  
 I have updated this guide and tested it again on 14.2-RELEASE.  
 Verified working on FreeBSD 14.3-RELEASE on 6/17/2025.
+Verified working  on FreeBSD 15.0-RELEASE on 12/2/2025.
 
 This guide is for .Net Developers.  It assumes you know enough to get FreeBSD installed but are generally unfamiliar with FreeBSD as a development platform.
 
