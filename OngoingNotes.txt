@@ -1,2 +1,3 @@
 Aug 7 2024 - I read that VSCode can run under a Linux Compatabiliy layer on FreeBSD.  This might make things a whole lot easier when it comes to using Extensions.  I need to look into this.
-Aug 8 2024 - We should consider if having a custom FreeBSD distro with everything pre-configured for VSCode C# development that tracks -RELEASE would be worth it.
+Aug 8 2024 - We should consider if having a custom FreeBSD distro with everything pre-configured for VSCode C# development that tracks -RELEASE would be worth it.  
+Aug 26 2026 - pkg install dotnet is still .Net 9.  It looks like they are close to having .Net 10 ready and there are community builds.
