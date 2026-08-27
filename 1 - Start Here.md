@@ -1,7 +1,8 @@
 This guide assumes you have FreeBSD 14.x-RELEASE or 15.x-RELEASE already installed.  
-Verified working on FreeBSD 15.0-RELEASE on 12/2/2025.  
-Verified working on FreeBSD 14.3-RELEASE on 6/17/2025, 14.2-RELEASE on Dec 7th, 2024. 
-Previous versions of this guide were tested on 14.1-RELEASE.  
+Previous versions of this guide were tested on 14.1-RELEASE.   
+Verified working on FreeBSD 14.3-RELEASE on 6/17/2025, 14.2-RELEASE on Dec 7th, 2024.  
+Verified working on FreeBSD 15.0-RELEASE on 12/2/2025. 
+Verified working  on FreeBSD 15.1-RELEASE on 12/2/2026.
 
 If you are running FreeBSD as a guest in VMWare Workstation, the specific steps to make that work are now inlined in Step 2.
 You need to switch to root user by using "su" before proceeding.  
